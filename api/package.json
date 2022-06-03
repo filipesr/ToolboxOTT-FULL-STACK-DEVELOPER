@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "test": "mocha"
   },
   "repository": "https://github.com/filipesr/ToolboxOTT-FULL-STACK-DEVELOPER/api",
   "author": "Filipe Rezende",
@@ -14,9 +15,11 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.1",
+    "mocha": "^10.0.0",
     "request": "^2.88.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.16",
+    "supertest": "^6.2.3"
   }
 }
