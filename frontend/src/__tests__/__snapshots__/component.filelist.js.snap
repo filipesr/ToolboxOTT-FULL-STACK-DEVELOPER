@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileList coponent testing list files 1`] = `
+<table
+  className="table table-striped table-bordered table-hover"
+>
+  <thead>
+    <tr>
+      <th>
+        File Name
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    style={
+      Object {
+        "cursor": "pointer",
+      }
+    }
+  >
+    <tr
+      onClick={[Function]}
+    >
+      <td>
+        teste
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

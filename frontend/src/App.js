@@ -1,29 +1,61 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-import { Container } from "react-bootstrap";
+import { Container, Button, Spinner } from "react-bootstrap";
+
+import { GetList, GetData } from "./service/api";
 
 import Header from "./components/Header";
 
 import FileList from "./components/FileList";
 import FileInfo from "./components/FileInfo";
 
-function App() {
-  const [file, setFile] = useState(false);
-  const backToList = () => setFile(false);
-  // const search = useLocation().search;
-  // const file = new URLSearchParams(search).get('file');
-  // const { file = false } = useLocation().search;
+function App({ initialListFiles = false, initialFileData = false }) {
+  const [listFiles, setListFiles] = useState(initialListFiles);
+  const [fileData, setFileData] = useState(initialFileData);
+  const { file = false } = fileData;
+
+  useEffect(() => {
+    GetList(setListFiles);
+  }, []);
+
+  useEffect(() => {
+    if (!file && fileData) GetData(fileData, setFileData);
+  }, [file, fileData]);
+
   const title = file ? `File info: ${file}` : "React Test App - List Files";
 
   return (
     <Container fluid>
       <Header title={title} />
       <Container>
-        {file ? (
-          <FileInfo file={file} backToList={backToList} />
-        ) : (
-          <FileList setFile={setFile} />
+        {!listFiles && (
+          <Button variant="secondary" disabled>
+            <Spinner
+              as="span"
+              animation="grow"
+              size="sm"
+              role="status"
+              aria-hidden="true"
+            />
+            Loading...
+          </Button>
         )}
+
+        {listFiles && <FileList setFile={setFileData} listFiles={listFiles} />}
+
+        {fileData && !file && (
+          <Button variant="secondary" disabled>
+            <Spinner
+              as="span"
+              animation="grow"
+              size="sm"
+              role="status"
+              aria-hidden="true"
+            />
+            Loading...
+          </Button>
+        )}
+        {file && <FileInfo fileData={fileData} />}
       </Container>
     </Container>
   );

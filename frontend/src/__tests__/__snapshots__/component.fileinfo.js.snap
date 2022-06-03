@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileInfo coponent testing reading data file 1`] = `
+<table
+  className="table table-striped table-bordered table-hover"
+>
+  <thead>
+    <tr>
+      <th>
+        File Name
+      </th>
+      <th>
+        Text
+      </th>
+      <th>
+        Number
+      </th>
+      <th>
+        Hex
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        teste
+      </td>
+      <td>
+        a
+      </td>
+      <td>
+        0
+      </td>
+      <td>
+        a
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;

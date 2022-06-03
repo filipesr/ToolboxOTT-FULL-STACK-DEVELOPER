@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header coponent testing list files 1`] = `
+<h4
+  style={
+    Object {
+      "backgroundColor": "#f66",
+      "color": "white",
+      "padding": "1rem",
+    }
+  }
+>
+  React Test App
+</h4>
+`;

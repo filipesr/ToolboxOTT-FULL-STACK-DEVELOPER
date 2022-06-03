@@ -1,0 +1,148 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Init App testing init app 1`] = `
+<div
+  className="container-fluid"
+>
+  <h4
+    style={
+      Object {
+        "backgroundColor": "#f66",
+        "color": "white",
+        "padding": "1rem",
+      }
+    }
+  >
+    React Test App - List Files
+  </h4>
+  <div
+    className="container"
+  >
+    <button
+      className="btn btn-secondary"
+      disabled={true}
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        className="spinner-grow spinner-grow-sm"
+        role="status"
+      />
+      Loading...
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Init App testing init app with Data 01 1`] = `
+<div
+  className="container-fluid"
+>
+  <h4
+    style={
+      Object {
+        "backgroundColor": "#f66",
+        "color": "white",
+        "padding": "1rem",
+      }
+    }
+  >
+    React Test App - List Files
+  </h4>
+  <div
+    className="container"
+  >
+    <table
+      className="table table-striped table-bordered table-hover"
+    >
+      <thead>
+        <tr>
+          <th>
+            File Name
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      />
+    </table>
+    <button
+      className="btn btn-secondary"
+      disabled={true}
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+        className="spinner-grow spinner-grow-sm"
+        role="status"
+      />
+      Loading...
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Init App testing init app with Data 02 1`] = `
+<div
+  className="container-fluid"
+>
+  <h4
+    style={
+      Object {
+        "backgroundColor": "#f66",
+        "color": "white",
+        "padding": "1rem",
+      }
+    }
+  >
+    File info: teste
+  </h4>
+  <div
+    className="container"
+  >
+    <table
+      className="table table-striped table-bordered table-hover"
+    >
+      <thead>
+        <tr>
+          <th>
+            File Name
+          </th>
+        </tr>
+      </thead>
+      <tbody
+        style={
+          Object {
+            "cursor": "pointer",
+          }
+        }
+      />
+    </table>
+    <table
+      className="table table-striped table-bordered table-hover"
+    >
+      <thead>
+        <tr>
+          <th>
+            File Name
+          </th>
+          <th>
+            Text
+          </th>
+          <th>
+            Number
+          </th>
+          <th>
+            Hex
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
